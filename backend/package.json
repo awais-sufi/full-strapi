@@ -4,6 +4,7 @@
   "private": true,
   "description": "A Strapi application",
   "scripts": {
+    "transfer:push": "dotenv -e .env -- strapi transfer --force --to $STRAPI_TRANSFER_URL",
     "build": "strapi build",
     "console": "strapi console",
     "deploy": "strapi deploy",
@@ -18,7 +19,7 @@
   "dependencies": {
     "@strapi/plugin-cloud": "5.23.0",
     "@strapi/plugin-users-permissions": "5.23.0",
-    "@strapi/strapi": "^5.23.0",
+    "@strapi/strapi": "5.23.0",
     "better-sqlite3": "11.3.0",
     "fs-extra": "^10.0.0",
     "mime-types": "^2.1.27",
@@ -31,6 +32,7 @@
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "dotenv-cli": "^10.0.0",
     "typescript": "^5"
   },
   "engines": {
